@@ -18,5 +18,69 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="bag1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bag2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mystring.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sequence1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bag1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bag2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bag3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bag4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bag5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mystring.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="node1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="node2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sequence1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stack1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stack2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bag4.template">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="bag5.template">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="node2.template">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="stack1.template">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="stack2.template">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
