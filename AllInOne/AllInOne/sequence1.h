@@ -72,7 +72,7 @@
 #define TAN_SEQUENCE_H
 #include <cstdlib>
 
-namespace tan_3
+namespace hua_3
 {
 	class sequence
 	{
