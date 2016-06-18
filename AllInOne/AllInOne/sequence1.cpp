@@ -42,15 +42,21 @@ namespace hua_3
 		if (size() < CAPACITY) {
 			if (is_item()) {
 				//add before current item
+            for (int i = size(); i > current_index; --i) {
+               data[i] = data[i-1];
+            }
+            data[current_index] = entry;
 			} else {
 				//no current item, then add at the front		
             //Shift items 1 index to the right before adding new entry
+            current_index = 0;
             if (size() != 0) {
-               for (size_type i = size() - 1; i >= 0; --i) {
+               for (int i = size() - 1; i >= current_index; --i) {
                   data[i + 1] = data[i];
                }
             }
-            data[0] = entry;
+            data[current_index] = entry;
+
 			}
          ++used;
 		} else {
@@ -63,7 +69,7 @@ namespace hua_3
       //can only attach if size < CAP
       if (size() < CAPACITY) {
          if (is_item()) {
-            //add before current item
+            //add after current item
          }
          else {
             //no current item, then add at the end
