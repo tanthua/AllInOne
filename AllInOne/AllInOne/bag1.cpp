@@ -6,15 +6,39 @@ namespace hua_3
 	//CONSTRUCTOR
 	//MODIFICATION MEMBER FUNCTIONS
 	bag::size_type bag::erase(const value_type& target) {
-		return 3;
+		size_type count = 0;
+		for (size_type i = 0; i < used; ++i) {
+			if (data[i] == target) {
+				data[i] = data[used - 1];
+				data[used - 1] = 0;
+				--used;
+			}
+		}
+		return count;
 	}
 
 	bool bag::erase_one(const value_type& target) {
-		return true;
+		bool flag = false;
+		for (size_type i = 0; i < used; ++i) {
+			if (data[i] == target) {
+				flag = true;
+				data[i] = data[used - 1];
+				data[used - 1] = 0;
+				--used;
+				break;
+			}
+		}
+		return flag;
 	}
 
 	void bag::insert(const value_type& entry) {
-
+		if (size() < CAPACITY) {
+			++used;
+			data[used] = entry;
+		}
+		else {
+			//do nothing
+		}
 	}
 
 	void bag::operator+=(const bag& addend) {
@@ -23,8 +47,12 @@ namespace hua_3
 
 	//CONSTANT MEMBER FUNCTIONS
 	bag::size_type bag::count(const value_type& target) const {
-		return 3;
+		size_type count = 0;
+		for (size_type i = 0; i < used; ++i) {
+			if (data[i] == target) {
+				++count;
+			}
+		}
+		return count;
 	}
-
-
 }
