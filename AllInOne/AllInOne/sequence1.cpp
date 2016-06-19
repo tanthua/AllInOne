@@ -70,10 +70,16 @@ namespace hua_3
       if (size() < CAPACITY) {
          if (is_item()) {
             //add after current item
+            for (int i = size(); i > current_index + 1; --i) {
+               data[i] = data[i - 1];
+            }
+            ++current_index;
+            data[current_index] = entry;
          }
          else {
             //no current item, then add at the end
             data[used] = entry;
+            current_index = used;
          }
       }
       else {
@@ -84,11 +90,14 @@ namespace hua_3
 
 	void sequence::remove_current() {
 		if (is_item()) {
-
+         for (int i = current_index; i < size(); ++i) {
+            data[i] = data[i + 1];
+         }
 		}
 		else {
 
 		}
+      --used;
 	}
 
 	//CONSTANT MEMBER FUNCTIONS
