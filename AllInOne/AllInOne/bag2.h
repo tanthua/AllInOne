@@ -68,7 +68,7 @@
 #define TAN_BAG2_H
 #include <cstdlib>  // Provides size_t
 
-namespace tan_4
+namespace hua_4
 {
 	class bag
 	{
