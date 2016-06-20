@@ -26,7 +26,10 @@ namespace hua_4
 
    //copy constructor
    string::string(const string& source) {
-
+      current_length = source.length();
+      sequence = new char[current_length + 1];
+      strcpy(sequence, source.sequence);
+      allocated = source.allocated;
    }
 
    //destructor
