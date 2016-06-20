@@ -73,17 +73,18 @@
 //   new_handler: The constructors, resize, operator +=, operator +, and the
 //   assignment operator.
 
-#ifndef TAN_MYSTRING_H
-#define TAN_MYSTRING_H
+#ifndef HUA_MYSTRING_H
+#define HUA_MYSTRING_H
+#include <iostream>
 #include <cstdlib>  // Provides size_t
 
-namespace tan_4
+namespace hua_4
 {
 	class string
 	{
 	public:
 		// CONSTRUCTORS and DESTRUCTOR
-		string(const char str[] = "");
+		string(char str[] = "");
 		string(const string& source);
 		~string();
 		// MODIFICATION MEMBER FUNCTIONS
@@ -96,13 +97,13 @@ namespace tan_4
 		size_t length() const { return current_length; }
 		char operator [ ](size_t position) const;
 		// FRIEND FUNCTIONS
-		friend ostream& operator <<(ostream& outs, const string& source);
+		/*friend ostream& operator <<(ostream& outs, const string& source);
 		friend bool operator ==(const string& s1, const string& s2);
 		friend bool operator !=(const string& s1, const string& s2);
 		friend bool operator >=(const string& s1, const string& s2);
 		friend bool operator <=(const string& s1, const string& s2);
 		friend bool operator > (const string& s1, const string& s2);
-		friend bool operator < (const string& s1, const string& s2);
+		friend bool operator < (const string& s1, const string& s2);*/
 	private:
 		char *sequence;
 		size_t allocated;
@@ -110,9 +111,9 @@ namespace tan_4
 	};
 
 	// NON-MEMBER FUNCTIONS for the string class
-	string operator +(const string& s1, const string& s2);
+	/*string operator +(const string& s1, const string& s2);
 	istream& operator >>(istream& ins, string& target);
-	void getline(istream& ins, string& target, char delimiter);
+	void getline(istream& ins, string& target, char delimiter);*/
 }
 
 #endif
