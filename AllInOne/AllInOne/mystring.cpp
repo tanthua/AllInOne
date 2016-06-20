@@ -39,21 +39,39 @@ namespace hua_4
 
    //MODIFICATION MEMBER FUNCTIONS
    void string::operator +=(const string& addend) {
-      char* new_sequence = new char[100];
+      current_length = current_length + addend.length();
+      char* new_sequence = new char[current_length + 1];
       strcpy(new_sequence, "");
       strcat(new_sequence, sequence);
       strcat(new_sequence, addend.sequence);
       delete[] sequence;
       sequence = new_sequence;
-      current_length = current_length + addend.length();
+
+      //TODO: figure out what allocated is for
    }
 
    void string::operator +=(const char addend[]) {
 
+      const string& addend_string(addend);
+      current_length = current_length + addend_string.length();
+      char* new_sequence = new char[current_length + 1];
+      strcpy(new_sequence, "");
+      strcat(new_sequence, sequence);
+      strcat(new_sequence, addend_string.sequence);
+      delete[] sequence;
+      sequence = new_sequence;
+
    }
 
    void string::operator +=(char addend) {
-
+      /*const string& addend_string(addend);
+      char* new_sequence = new char[100];
+      strcpy(new_sequence, "");
+      strcat(new_sequence, sequence);
+      strcat(new_sequence, addend_string.sequence);
+      delete[] sequence;
+      sequence = new_sequence;
+      current_length = current_length + addend_string.length();*/
    }
 
    void string::reserve(size_t n) {
