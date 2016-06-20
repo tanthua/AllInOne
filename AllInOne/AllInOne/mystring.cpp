@@ -64,14 +64,10 @@ namespace hua_4
    }
 
    void string::operator +=(char addend) {
-      /*const string& addend_string(addend);
-      char* new_sequence = new char[100];
-      strcpy(new_sequence, "");
-      strcat(new_sequence, sequence);
-      strcat(new_sequence, addend_string.sequence);
-      delete[] sequence;
-      sequence = new_sequence;
-      current_length = current_length + addend_string.length();*/
+      sequence[length()] = addend;
+      current_length += 1;
+      std::cout << strlen(sequence) << std::endl;
+      //TODO: length is not correct, allocated is untouched
    }
 
    void string::reserve(size_t n) {

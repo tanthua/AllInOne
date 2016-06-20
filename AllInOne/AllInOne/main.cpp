@@ -13,6 +13,8 @@ int main() {
    s2.print_string();
    s2 += "Hey you";
    s2.print_string();
+   s2 += '!';
+   s2.print_string();
    EXIT_SUCCESS;
    return 0;
 }
