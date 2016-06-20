@@ -84,7 +84,7 @@ namespace hua_4
 	{
 	public:
 		// CONSTRUCTORS and DESTRUCTOR
-		string(char str[] = "");
+		string(const char str[] = "");
 		string(const string& source);
 		~string();
 		// MODIFICATION MEMBER FUNCTIONS
@@ -96,6 +96,7 @@ namespace hua_4
 		// CONSTANT MEMBER FUNCTIONS
 		size_t length() const { return current_length; }
 		char operator [ ](size_t position) const;
+      void print_string() const;
 		// FRIEND FUNCTIONS
 		/*friend ostream& operator <<(ostream& outs, const string& source);
 		friend bool operator ==(const string& s1, const string& s2);

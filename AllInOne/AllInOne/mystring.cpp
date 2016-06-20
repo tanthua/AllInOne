@@ -17,8 +17,11 @@ namespace hua_4
 {
    //CONSTRUCTORS and DESTRUCTOR
    //intial constructor
-   string::string(char str[]) {
-      sequence = str;
+   string::string(const char str[]) {
+      current_length = strlen(str);
+      sequence = new char[current_length + 1];
+      strcpy(sequence, str);
+      allocated = 0;
    }
 
    //copy constructor
@@ -28,7 +31,7 @@ namespace hua_4
 
    //destructor
    string::~string() {
-      delete sequence;
+      delete[] sequence;
    }
 
    //MODIFICATION MEMBER FUNCTIONS
@@ -59,6 +62,13 @@ namespace hua_4
       return a;
    }
 
+   void string::print_string() const {
+      char* sequence_ = sequence;
+      for (int i = 0; i < length(); ++i) {
+         std::cout << sequence_[i];
+      }
+      std::cout << std::endl;
+   }
    //FRIEND FUNCTIONS
 
 }
