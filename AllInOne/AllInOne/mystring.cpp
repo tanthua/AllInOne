@@ -101,5 +101,12 @@ namespace hua_4
    //FRIEND FUNCTIONS
    //Not a member function, but has access to private members
    //Not activated by a particular object
-
+   
+   //NON MEMBER FUNCTIONS
+   string operator +(const string& s1, const string& s2) {
+      string newString;
+      newString += s1;
+      newString += s2;
+      return newString;
+   }
 }

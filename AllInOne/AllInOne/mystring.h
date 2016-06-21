@@ -112,8 +112,8 @@ namespace hua_4
 	};
 
 	// NON-MEMBER FUNCTIONS for the string class
-	/*string operator +(const string& s1, const string& s2);
-	istream& operator >>(istream& ins, string& target);
+	string operator +(const string& s1, const string& s2);
+	/*istream& operator >>(istream& ins, string& target);
 	void getline(istream& ins, string& target, char delimiter);*/
 }
 
