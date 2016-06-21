@@ -21,7 +21,7 @@ namespace hua_4
    //intial constructor
    string::string(const char str[]) {
       current_length = strlen(str);
-      allocated = current_length + 1;
+      allocated = current_length + 10;
       sequence = new char[allocated];
       strcpy(sequence, str);
    }
@@ -29,7 +29,7 @@ namespace hua_4
    //copy constructor
    string::string(const string& source) {
       current_length = source.length();
-      sequence = new char[current_length + 1];
+      sequence = new char[current_length + 10];
       strcpy(sequence, source.sequence);
       allocated = source.allocated;
    }
@@ -68,30 +68,9 @@ namespace hua_4
    }
 
    void string::operator +=(char addend) {
-      //
-      //sequence[current_length] = addend;
-      current_length = current_length + 1;
+      sequence[current_length] = addend;
+      ++current_length;
       allocated = current_length + 1;
-      char* new_sequence = new char[allocated];
-      strcpy(new_sequence, "");
-
-      std::cout << "sequence vs new_sequence before cat\n";
-      for (int i = 0; i <= current_length; ++i) {
-         std::cout << sequence[i] << " vs " << new_sequence[i] << "\n";
-      }
-
-      strcat(new_sequence, sequence);
-      new_sequence[current_length] = addend;
-      std::cout << "sequence vs new_sequence after cat\n";
-      for (int i = 0; i <= current_length; ++i) {
-         std::cout << sequence[i] << " vs " << new_sequence[i] << "\n";
-      }
-
-      //new_sequence[current_length] = addend;
-
-      delete[] sequence;
-      sequence = new_sequence;
-      //TODO: length is not correct, allocated is untouched
    }
 
    void string::reserve(size_t n) {
