@@ -42,7 +42,8 @@ namespace hua_4
    //MODIFICATION MEMBER FUNCTIONS
    void string::operator +=(const string& addend) {
       current_length = current_length + addend.length();
-      char* new_sequence = new char[current_length + 1];
+      allocated = current_length + 1;
+      char* new_sequence = new char[allocated];
       strcpy(new_sequence, "");
       strcat(new_sequence, sequence);
       strcat(new_sequence, addend.sequence);
@@ -56,7 +57,8 @@ namespace hua_4
 
       const string& addend_string(addend);
       current_length = current_length + addend_string.length();
-      char* new_sequence = new char[current_length + 1];
+      allocated = current_length + 1;
+      char* new_sequence = new char[allocated];
       strcpy(new_sequence, "");
       strcat(new_sequence, sequence);
       strcat(new_sequence, addend_string.sequence);
@@ -66,9 +68,18 @@ namespace hua_4
    }
 
    void string::operator +=(char addend) {
-      sequence[length()] = addend;
       current_length += 1;
-      std::cout << strlen(sequence) << std::endl;
+      allocated = current_length + 1;
+      char* new_sequence = new char[allocated];
+      strcpy(new_sequence, "");
+      strcat(new_sequence, sequence);
+
+      new_sequence[current_length] = addend;
+      for (int i = 0; i < 10; ++i) {
+         std::cout << new_sequence[i] << " ";
+      }
+      delete[] sequence;
+      sequence = new_sequence;
       //TODO: length is not correct, allocated is untouched
    }
 
