@@ -68,16 +68,27 @@ namespace hua_4
    }
 
    void string::operator +=(char addend) {
-      current_length += 1;
+      //
+      //sequence[current_length] = addend;
+      current_length = current_length + 1;
       allocated = current_length + 1;
       char* new_sequence = new char[allocated];
       strcpy(new_sequence, "");
-      strcat(new_sequence, sequence);
 
-      new_sequence[current_length] = addend;
-      for (int i = 0; i < 10; ++i) {
-         std::cout << new_sequence[i] << " ";
+      std::cout << "sequence vs new_sequence before cat\n";
+      for (int i = 0; i <= current_length; ++i) {
+         std::cout << sequence[i] << " vs " << new_sequence[i] << "\n";
       }
+
+      strcat(new_sequence, sequence);
+      new_sequence[current_length] = addend;
+      std::cout << "sequence vs new_sequence after cat\n";
+      for (int i = 0; i <= current_length; ++i) {
+         std::cout << sequence[i] << " vs " << new_sequence[i] << "\n";
+      }
+
+      //new_sequence[current_length] = addend;
+
       delete[] sequence;
       sequence = new_sequence;
       //TODO: length is not correct, allocated is untouched
@@ -88,14 +99,17 @@ namespace hua_4
    }
 
    void string::operator =(const string& source) {
-
+      delete[] sequence;
+      current_length = source.current_length;
+      allocated = current_length + 1;
+      sequence = new char[allocated];
+      strcpy(sequence, source.sequence);
    }
 
    //CONSTANT MEMBER FUNCTIONS
    //length() is in header file
    char string::operator [](size_t position) const {
-      char a = 'a';
-      return a;
+      return sequence[position];
    }
 
    void string::print_string() const {
