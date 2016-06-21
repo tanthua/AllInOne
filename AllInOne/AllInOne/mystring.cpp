@@ -3,9 +3,11 @@ Implementation of string class, as a practice to undestand
 how standard string class is created
 06/19/2016
 Tan Hua
+C-string functions needed:
+-strcmp, strcpy, strlen, strcat
 Private members needed:
 -char *sequence
--size_t allocated;
+-size_t allocated; always equals greater than current_length
 -size_t current_length
 */
 
@@ -19,9 +21,9 @@ namespace hua_4
    //intial constructor
    string::string(const char str[]) {
       current_length = strlen(str);
-      sequence = new char[current_length + 1];
+      allocated = current_length + 1;
+      sequence = new char[allocated];
       strcpy(sequence, str);
-      allocated = 0;
    }
 
    //copy constructor
@@ -93,5 +95,7 @@ namespace hua_4
       std::cout << std::endl;
    }
    //FRIEND FUNCTIONS
+   //Not a member function, but has access to private members
+   //Not activated by a particular object
 
 }
