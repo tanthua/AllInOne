@@ -155,6 +155,7 @@
     <ClCompile Include="bag2.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mystring.cpp" />
+    <ClCompile Include="node1.cpp" />
     <ClCompile Include="poly1.cpp" />
     <ClCompile Include="sequence1.cpp" />
   </ItemGroup>

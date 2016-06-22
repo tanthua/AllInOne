@@ -33,6 +33,9 @@
     <ClCompile Include="poly1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="node1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bag1.h">

@@ -121,11 +121,11 @@
 //   bad_alloc: the constructor, list_head_insert, list_insert, list_copy,
 //   list_piece.
 
-#ifndef TAN_NODE1_H  
-#define TAN_NODE1_H
+#ifndef HUA_NODE1_H  
+#define HUA_NODE1_H
 #include <cstdlib> // Provides size_t and NULL
 
-namespace tan_5
+namespace hua_5
 {
     class node
     {
