@@ -8,7 +8,11 @@ namespace hua_4
    //CONSTRUCTORS and DESTRUCTOR
    //constructor, copy constructor
    polynomial::polynomial() {
-
+      current_array_size = 10;
+      coef = new double[current_array_size];
+      for (int i = 0; i < current_array_size; ++i) {
+         coef[i] = 0;
+      }
    }
 
    polynomial::polynomial(const polynomial& source) {
@@ -44,7 +48,13 @@ namespace hua_4
    void polynomial::trim() {
 
    }
-
+   // CONSTANT MEMBER FUNCTIONS
+   void polynomial::print() const {
+      for (int i = 0; i < current_array_size; ++i) {
+         std::cout << coef[i] << " ";
+      }
+      std::cout << std::endl;
+   }
  //  //MODIFICATION OPERATORS
  //  polynomial& polynomial::operator =(const polynomial& source) {
 

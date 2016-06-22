@@ -327,8 +327,8 @@ namespace hua_4
          double guess = 0,
          unsigned int maximum_iterations = 100,
          double epsilon = 1e-8
-      )
-         const;
+      ) const;
+      void print() const;
       polynomial integral(unsigned int n = 1) const;
       unsigned int next_term(unsigned int e) const;
       unsigned int previous_term(unsigned int e) const;
