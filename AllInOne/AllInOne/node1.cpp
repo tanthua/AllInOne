@@ -6,11 +6,17 @@ namespace hua_5
 {
    // FUNCTIONS for the linked list toolkit
    std::size_t list_length(const node* head_ptr) {
-      return 3;
+	   std::size_t count = 0;
+	   const node* temp_ptr = head_ptr;
+	   while (temp_ptr != NULL) {
+		   ++count;
+		   temp_ptr = temp_ptr->link();
+	   }
+	   return count;
    }
 
    void list_head_insert(node*& head_ptr, const node::value_type& entry) {
-
+	   head_ptr = new node(entry, head_ptr);
    }
 
    void list_insert(node* previous_ptr, const node::value_type& entry) {

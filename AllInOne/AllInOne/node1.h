@@ -131,7 +131,7 @@ namespace hua_5
     {
     public:
 	// TYPEDEF
-	typedef double value_type;
+   typedef double value_type;
     
 	// CONSTRUCTOR
 	node(
@@ -153,8 +153,8 @@ namespace hua_5
     	node* link( )             { return link_field; }
 	
     private:
-	value_type data_field;
-	node* link_field;
+	   value_type data_field;
+	   node* link_field;
     };
 
     // FUNCTIONS for the linked list toolkit
