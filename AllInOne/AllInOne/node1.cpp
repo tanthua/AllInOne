@@ -20,12 +20,20 @@ namespace hua_5
    }
 
    void list_insert(node* previous_ptr, const node::value_type& entry) {
-
+	   node* insert_ptr = new node(entry);
+	   insert_ptr->set_link(previous_ptr->link());
+	   previous_ptr->set_link(insert_ptr);
    }
 
    node* list_search(node* head_ptr, const node::value_type& target) {
-      node* a;
-      return a;
+      node* search_ptr = head_ptr;
+	  while (search_ptr != NULL) {
+		  if (search_ptr->data() == target)
+			  return search_ptr;
+
+		  search_ptr = search_ptr->link();
+	  }
+      return search_ptr;
    }
    const node* list_search
    (const node* head_ptr, const node::value_type& target) {

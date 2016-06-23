@@ -5,6 +5,14 @@
 
 using namespace std;
 
+void print_node(hua_5::node* ptr) {
+	while (ptr != NULL) {
+		cout << ptr->data() << " ";
+		ptr = ptr->link();
+	}
+	cout << endl;
+}
+
 int main() {
 	hua_5::node* ptr1;
 	ptr1 = new hua_5::node;
@@ -20,6 +28,18 @@ int main() {
 	cout << list_length(ptr1) << endl;
 	cout << ptr1->data() << endl;
 	cout << ptr1->link()->data() << endl;
+	list_insert(ptr2, 200);
+	cout << list_length(ptr1) << endl;
+	cout << ptr1->data() << endl;
+	cout << ptr1->link()->data() << endl;
+	cout << "length: " << list_length(ptr1) << endl;
+	cout << "Print: ";
+	print_node(ptr1);
+	hua_5::node* search_ptr;
+	search_ptr = list_search(ptr1, 101);
+	cout << "Result: ";
+	cout << search_ptr->data() << endl;
    EXIT_SUCCESS;
    return 0;
 }
+
