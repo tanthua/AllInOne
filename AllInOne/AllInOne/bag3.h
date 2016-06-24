@@ -1,5 +1,5 @@
 // FILE: bag3.h 
-// CLASS PROVIDED: bag (part of the namespace tan_5)
+// CLASS PROVIDED: bag (part of the namespace hua_5)
 //
 // TYPEDEFS for the bag class:
 //   bag::value_type
@@ -56,11 +56,11 @@
 //   bad_alloc: The constructors, insert, operator +=, operator +, and the
 //   assignment operator.
 
-#ifndef TAN_BAG3_H
-#define TAN_BAG3_H
+#ifndef HUA_BAG3_H
+#define HUA_BAG3_H
 #include <cstdlib>   // Provides size_t and NULL
 #include "node1.h"   // Provides node class
-namespace tan_5
+namespace hua_5
 {
     class bag
     {
@@ -71,7 +71,7 @@ namespace tan_5
         // CONSTRUCTORS and DESTRUCTOR
         bag( );
         bag(const bag& source);
-	~bag( );
+		~bag( );
         // MODIFICATION MEMBER FUNCTIONS
         size_type erase(const value_type& target);
         bool erase_one(const value_type& target);

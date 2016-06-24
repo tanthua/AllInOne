@@ -153,6 +153,7 @@
   <ItemGroup>
     <ClCompile Include="bag1.cpp" />
     <ClCompile Include="bag2.cpp" />
+    <ClCompile Include="bag3.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mystring.cpp" />
     <ClCompile Include="node1.cpp" />
