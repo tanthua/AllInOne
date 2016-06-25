@@ -45,11 +45,11 @@
 //     Assignments and the copy constructor may be used with stack<Item> 
 //     objects.
 
-#ifndef TAN_STACK1_H
-#define TAN_STACK1_H
+#ifndef HUA_STACK1_H
+#define HUA_STACK1_H
 #include <cstdlib> // Provides size_t
 
-namespace tan_7A
+namespace hua_7A
 {
     template <class Item>
     class stack
