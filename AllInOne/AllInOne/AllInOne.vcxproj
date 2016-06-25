@@ -154,6 +154,7 @@
     <ClCompile Include="bag1.cpp" />
     <ClCompile Include="bag2.cpp" />
     <ClCompile Include="bag3.cpp" />
+    <ClCompile Include="dnode.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mystring.cpp" />
     <ClCompile Include="node1.cpp" />
@@ -166,10 +167,12 @@
     <ClInclude Include="bag3.h" />
     <ClInclude Include="bag4.h" />
     <ClInclude Include="bag5.h" />
+    <ClInclude Include="dnode.h" />
     <ClInclude Include="mystring.h" />
     <ClInclude Include="node1.h" />
     <ClInclude Include="node2.h" />
     <ClInclude Include="poly1.h" />
+    <ClInclude Include="poly2.h" />
     <ClInclude Include="sequence1.h" />
     <ClInclude Include="stack1.h" />
     <ClInclude Include="stack2.h" />
