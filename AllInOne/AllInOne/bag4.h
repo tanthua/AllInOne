@@ -69,45 +69,45 @@
 //   new_handler: the constructors, resize, insert, operator += , operator +,
 //   and the assignment operator.
 
-#ifndef MAIN_SAVITCH_BAG4_H
-#define MAIN_SAVITCH_BAG4_H
-#include <cstdlib> // Provides size_t
-
-namespace main_savitch_6A
+#ifndef HUA_BAG4_H
+#define HUA_BAG4_H
+namespace hua_6A
 {
-    template <class Item>
-    class bag
-    {
-    public:
-        // TYPEDEFS and MEMBER CONSTANTS
-	typedef Item value_type;
-	typedef std::size_t size_type;
-	static const size_type DEFAULT_CAPACITY = 30;
-        // CONSTRUCTORS and DESTRUCTOR
-        bag(size_type initial_capacity = DEFAULT_CAPACITY);
-        bag(const bag& source);
-        ~bag( );
-        // MODIFICATION MEMBER FUNCTIONS
-        size_type erase(const Item& target);
-        bool erase_one(const Item& target);
-        void insert(const Item& entry);
-        void operator =(const bag& source);
-        void operator +=(const bag& addend);
-        void reserve(size_type capacity);
-        // CONSTANT MEMBER FUNCTIONS
-        size_type count(const Item& target) const;
-        Item grab( ) const;
-        size_type size( ) const { return used; }
-    private:
-        Item *data;           // Pointer to partially filled dynamic array
-        size_type used;       // How much of array is being used
-        size_type capacity;   // Current capacity of the bag
-    };
+	template <class Item>
+	class bag
+	{
+	public:
+		//TYPEDEFS and MEMBER CONSTANTS
+		typedef Item value_type;
+		typedef std::size_t size_type;
+		stataic const size_type DEFAULT_CAPACITY = 30;
 
-    // NONMEMBER FUNCTIONS
-    template <class Item>
-    bag<Item> operator +(const bag<Item>& b1, const bag<Item>& b2);
+		//CONSTRUCTOR and DESTRUCTOR
+		bag(size_type initial_capacity = DEFAULT_CAPACITY);
+		bag(const bag& source);
+		~bag();
+
+		//MODIFICATION MEMBER FUNCTIONS
+		size_type erase(const Item& target);
+		bool erase_one(const Item& target);
+		void insert(const Item& entry);
+		void operator =(const bag& source);
+		void operator +=(const bag& addend);
+		void reserve(size_type capacity);
+
+		//CONSTANT MEMBER FUNCTIONS
+		size_type count(const Item& target) const;
+		Item grab() const;
+		size_type size() const { return used; }
+	private:
+		Item *data;
+		size_type used;
+		size_type capacity;
+	};
+
+	//NONMEMBER FUNCTIONS
+	template <class Item>
+	bag<Item> operator +(const bag<Item>& b1, const bag<Item>& b2);
 }
-
-#include "bag4.template"  // Include the implementation
+#include "bag4.template"
 #endif
