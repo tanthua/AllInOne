@@ -45,6 +45,9 @@
     <ClCompile Include="dnode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="bintree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bag1.h">

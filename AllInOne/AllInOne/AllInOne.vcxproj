@@ -154,6 +154,7 @@
     <ClCompile Include="bag1.cpp" />
     <ClCompile Include="bag2.cpp" />
     <ClCompile Include="bag3.cpp" />
+    <ClCompile Include="bintree.cpp" />
     <ClCompile Include="dnode.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mystring.cpp" />
