@@ -43,6 +43,26 @@ namespace hua_10
 	};
 
 	//NON-MEMBER FUNCTIONS for the binary_tree_node<Item>
+	template <class Process, class BTNode>
+	void inorder(Process f, BTNode* node_ptr);
+
+	template <class Process , class BTNode>
+	void preorder(Process f, BTNode* node_ptr);
+
+	template <class Process, class BTNode>
+	void postorder(Process f, BTNode* node_ptr);
+
+	template <class Item, class SizeType>
+	void print(const binary_tree_node<Item>* node_ptr, SizeType depth);
+
+	template <class Item>
+	void tree_clear(binary_tree_node<Item>*& root_ptr);
+
+	template <class Item>
+	binary_tree_node<Item>* tree_copy(const binary_tree_node<Item>* root_ptr);
+
+	template <class Item>
+	std::size_t tree_size(const binary_tree_node<Item>* node_ptr);
 
 }
 #endif
