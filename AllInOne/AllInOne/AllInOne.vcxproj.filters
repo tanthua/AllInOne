@@ -89,6 +89,9 @@
     <ClInclude Include="poly2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="bintree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="bag4.template">

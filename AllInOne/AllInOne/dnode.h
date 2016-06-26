@@ -93,7 +93,6 @@ namespace hua_5
 		dnode *link_fore;
 		dnode *link_back;
 	};
-
 }
 
 #endif

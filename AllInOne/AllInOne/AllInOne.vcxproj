@@ -167,6 +167,7 @@
     <ClInclude Include="bag3.h" />
     <ClInclude Include="bag4.h" />
     <ClInclude Include="bag5.h" />
+    <ClInclude Include="bintree.h" />
     <ClInclude Include="dnode.h" />
     <ClInclude Include="mystring.h" />
     <ClInclude Include="node1.h" />
