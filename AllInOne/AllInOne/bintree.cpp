@@ -13,6 +13,11 @@ namespace hua_10
 	//NON-MEMBER FUNCTIONS for the binary_tree_node<Item>:
 	template class binary_tree_node<int>;
 
+	template <class Item, class SizeType>
+	void print(binary_tree_node<Item>* node_ptr, SizeType depth) {
+
+	}
+
 	template <class Item>
 	void tree_clear(binary_tree_node<Item>* root_ptr) {
 		binary_tree_node<Item>* child;
