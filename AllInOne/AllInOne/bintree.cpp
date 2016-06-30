@@ -50,4 +50,30 @@ namespace hua_10
 		//return new binary_tree_node<Item>(200);
 	}
 
+	template <class Process, class BTNode>
+	void inorder(Process f, BTNode* node_ptr) {
+		if (node_ptr != NULL) {
+			inorder(f, node_ptr->left());
+			f(node_ptr->data());
+			inorder(f, node_ptr->right());
+		}
+	}
+
+	template <class Process, class BTNode>
+	void prorder(Process f, BTNode* node_ptr) {
+		if (node_ptr != NULL) {
+			f(node_ptr->data());
+			preorder(f, node_ptr->left());
+			preorder(f, node_ptr->right());
+		}
+	}
+
+	template <class Process, class BTNode>
+	void postorder(Process f, BTNode* node_ptr) {
+		if (node_ptr != NULL) {
+			preorder(f, node_ptr->left());
+			preorder(f, node_ptr->right());
+			f(node_ptr->data());
+		}
+	}
 }
