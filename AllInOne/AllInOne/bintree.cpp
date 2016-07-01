@@ -13,6 +13,33 @@ namespace hua_10
 	//NON-MEMBER FUNCTIONS for the binary_tree_node<Item>:
 	template class binary_tree_node<int>;
 
+	template <class Process, class BTNode>
+	void inorder(Process f, BTNode* node_ptr) {
+		if (node_ptr != NULL) {
+			inorder(f, node_ptr->left());
+			f(node_ptr->data());
+			inorder(f, node_ptr->right());
+		}
+	}
+
+	template <class Process, class BTNode>
+	void prorder(Process f, BTNode* node_ptr) {
+		if (node_ptr != NULL) {
+			f(node_ptr->data());
+			preorder(f, node_ptr->left());
+			preorder(f, node_ptr->right());
+		}
+	}
+
+	template <class Process, class BTNode>
+	void postorder(Process f, BTNode* node_ptr) {
+		if (node_ptr != NULL) {
+			preorder(f, node_ptr->left());
+			preorder(f, node_ptr->right());
+			f(node_ptr->data());
+		}
+	}
+
 	template <class Item, class SizeType>
 	void print(binary_tree_node<Item>* node_ptr, SizeType depth) {
 
@@ -50,30 +77,11 @@ namespace hua_10
 		//return new binary_tree_node<Item>(200);
 	}
 
-	template <class Process, class BTNode>
-	void inorder(Process f, BTNode* node_ptr) {
-		if (node_ptr != NULL) {
-			inorder(f, node_ptr->left());
-			f(node_ptr->data());
-			inorder(f, node_ptr->right());
-		}
-	}
-
-	template <class Process, class BTNode>
-	void prorder(Process f, BTNode* node_ptr) {
-		if (node_ptr != NULL) {
-			f(node_ptr->data());
-			preorder(f, node_ptr->left());
-			preorder(f, node_ptr->right());
-		}
-	}
-
-	template <class Process, class BTNode>
-	void postorder(Process f, BTNode* node_ptr) {
-		if (node_ptr != NULL) {
-			preorder(f, node_ptr->left());
-			preorder(f, node_ptr->right());
-			f(node_ptr->data());
-		}
+	template <class Item>
+	std::size_t tree_size(const binary_tree_node<Item>* node_ptr) {
+		if (node_ptr == NULL)
+			return 0;
+		else
+			return 1 + tree_size(node_ptr->left()) + tree_size(node_ptr->right());
 	}
 }

@@ -48,6 +48,9 @@
     <ClCompile Include="bintree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="bag6.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bag1.h">
@@ -93,6 +96,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="bintree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bag6.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
