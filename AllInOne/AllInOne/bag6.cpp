@@ -4,6 +4,11 @@
 namespace hua_10
 {
 	template class bag<int>;
+	//helper functions
+	template <class Item>
+	void bst_remove_max(binary_tree_node<Item>*& roor)
+
+
 	//CONSTRUCTORS AND DESTRUCTOR
 	template <class Item>
 	bag<Item>::bag() {
